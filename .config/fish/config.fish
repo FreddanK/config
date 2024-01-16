@@ -6,13 +6,36 @@ if status is-interactive
     set -gx SVN_EDITOR nvim
     set -gx MAKE_JOBS 4
 
-    alias l='eza'
-    alias ll='eza -lg'
-    alias la='eza -lga'
-    alias bat='batcat'
-    alias fd='fdfind'
+    abbr l 'eza'
+    abbr ll 'eza -lg'
+    abbr la 'eza -lga'
+    abbr cat 'batcat'
+    abbr bat 'batcat'
+    abbr fd 'fdfind'
+    abbr gu 'gitui'
+    abbr cfish 'vim ~/.config/fish/config.fish'
+    abbr cvim 'vim ~/.config/nvim/init.vim'
+    abbr rfish 'source ~/.config/fish/config.fish'
 
-    alias gu='gitui'
+    function ..
+        cd ..
+    end
+
+    function ...
+        cd ../..
+    end
+
+    function ...
+        cd ../../..
+    end
+
+    function ....
+        cd ../../../..
+    end
+
+    function .....
+        cd ../../../../..
+    end
 
     zoxide init fish | source
 end
