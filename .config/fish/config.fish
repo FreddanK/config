@@ -6,9 +6,13 @@ if status is-interactive
     set -gx SVN_EDITOR nvim
     set -gx MAKE_JOBS 4
 
+    alias l='eza'
     alias ll='eza -lg'
+    alias la='eza -lga'
     alias bat='batcat'
     alias fd='fdfind'
+
+    alias gu='gitui'
 
     zoxide init fish | source
 end
