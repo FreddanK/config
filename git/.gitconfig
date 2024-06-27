@@ -1,0 +1,5 @@
+[user]
+	name = Fredrik Kjellberg
+	email = fkakg@hotmail.com
+[core]
+	editor = nvim
