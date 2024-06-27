@@ -16,6 +16,12 @@ if status is-interactive
     abbr cfish 'vim ~/.config/fish/config.fish'
     abbr cvim 'vim ~/.config/nvim/init.vim'
     abbr rfish 'source ~/.config/fish/config.fish'
+    abbr tm 'tmux'
+    abbr ta 'tmux a'
+
+    function vim
+        nvim $argv
+    end
 
     function ..
         cd ..
