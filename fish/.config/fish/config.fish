@@ -9,19 +9,15 @@ if status is-interactive
     abbr l 'eza'
     abbr ll 'eza -lg'
     abbr la 'eza -lga'
-    abbr cat 'batcat'
     abbr bat 'batcat'
     abbr fd 'fdfind'
     abbr gu 'gitui'
     abbr cfish 'vim ~/.config/fish/config.fish'
     abbr cvim 'vim ~/.config/nvim/init.vim'
     abbr rfish 'source ~/.config/fish/config.fish'
-    abbr tm 'tmux'
-    abbr ta 'tmux a'
 
-    function vim
-        nvim $argv
-    end
+    abbr fzf 'fzf --preview="cat {}"'
+
 
     function ..
         cd ..
@@ -31,17 +27,21 @@ if status is-interactive
         cd ../..
     end
 
-    function ...
+    function ....
         cd ../../..
     end
 
-    function ....
+    function .....
         cd ../../../..
     end
 
-    function .....
+    function ......
         cd ../../../../..
     end
 
     zoxide init fish | source
 end
+
+# Created by `pipx` on 2024-01-22 14:18:06
+set PATH $PATH /home/fredrik/.local/bin
+
